@@ -11,6 +11,7 @@ const setOutNumber = (section: HTMLElement): void => {
     const number: number = Number(item.dataset.number)
     const step: number = item.dataset.numberStep ? Number(item.dataset.numberStep) : 0.5
     const time: number = item.dataset.numberTime ? Number(item.dataset.numberTime) * 1000 : 1000
+    const fixed: number = item.dataset.numberFixed ? Number(item.dataset.numberFixed) : 0
     const timer: number = Math.round(time / (number / step))
 
     let sum: number = 0
@@ -21,13 +22,13 @@ const setOutNumber = (section: HTMLElement): void => {
 
       if (sum == number || sum > number) {
 
-        item.innerHTML = String(number)
+        item.innerHTML = String(number.toFixed(fixed))
 
         clearInterval(interval)
 
       } else {
 
-        item.innerHTML = String(sum)
+        item.innerHTML = String(sum.toFixed(fixed))
 
       }
 

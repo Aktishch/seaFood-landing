@@ -50,6 +50,7 @@ const init = (): void => {
       const slide = input.closest('[data-quiz-slide]') as HTMLElement
 
       checkQuizSlide(slide)
+
     }
 
   }) as EventListener)
