@@ -3,7 +3,6 @@ const setAccordion = (element: HTMLElement): void => {
   const accordion = element as HTMLElement
   const toggle = accordion.querySelector('*[data-accordion-toggle]') as HTMLElement
   const content = accordion.querySelector('*[data-accordion-content]') as HTMLElement
-  const accordionItems = accordion.querySelectorAll('*[data-accordion]') as NodeListOf<Element>
 
   const setAccordionHeight = (): void => {
 
@@ -41,31 +40,6 @@ const setAccordion = (element: HTMLElement): void => {
     }
 
   }) as EventListener)
-
-  accordionItems.forEach((element: Element): void => {
-
-    const accordionItem = element as HTMLElement
-
-    if (!accordionItem) return
-
-    const accordionItemToggle = accordionItem.querySelector('*[data-accordion-toggle]') as HTMLElement
-    const accordionItemContent = accordionItem.querySelector('*[data-accordion-content]') as HTMLElement
-
-    accordionItemToggle.addEventListener('click', ((): void => {
-
-      if (accordionItem.dataset.accordion == 'hidden') {
-
-        content.style.maxHeight = `${content.scrollHeight + accordionItemContent.scrollHeight}px`
-
-      } else {
-
-        content.style.maxHeight = `${content.scrollHeight - accordionItemContent.scrollHeight}px`
-
-      }
-
-    }) as EventListener)
-
-  })
 
 }
 

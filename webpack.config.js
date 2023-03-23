@@ -102,6 +102,13 @@ module.exports = {
 
         },
 
+        {
+
+          from: 'src/media/',
+          to: 'media/'
+
+        },
+
         ...generatePlugins('src/dialogs')
 
       ]

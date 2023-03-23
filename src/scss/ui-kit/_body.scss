@@ -4,14 +4,14 @@ body {
   background-color: var(--color-white);
 
   &:is([data-theme="dark"]) {
-    --color-black: #fff;
-    --color-white: #000;
+    --color-black: #FFFFFF;
+    --color-white: #20162C;
     --color-grey : #303030;
 
     & :is([data-theme="light"], .btn) {
-      --color-black: #000;
-      --color-white: #fff;
-      --color-grey : #f6f7f9;
+      --color-black: #20162C;
+      --color-white: #FFFFFF;
+      --color-grey : #F7F7F8;
     }
   }
 }

@@ -22,7 +22,6 @@
 
   @include getBtn("primary");
   @include getBtn("second");
-  @include getBtn("gray");
 
   &--lg {
     --size: var(--size-lg);
@@ -36,7 +35,7 @@
 
   &--lg,
   &--md {
-    border-radius : 6px;
+    border-radius : 8px;
     padding-inline: calc(var(--size) / 2);
   }
 
@@ -94,8 +93,3 @@
     }
   }
 }
-
-@import "./button-swipe";
-@import "./button-glow";
-@import "./button-bubles";
-@import "./button-border";
