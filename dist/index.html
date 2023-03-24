@@ -1,0 +1,669 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="autor" content="Студия КИТ"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileImage" content="img/favicon/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Seafood Expo Eurasia</title>
+<link href="css/style.css" rel="stylesheet"><script src="js/application.js"></script></head>
+<body>
+
+  <!-- Прогресс прокрутки страницы -->
+
+  <div class="progress-line d-none d-md-block fixed zi-4 bg-primary pointer-none w-0" data-progress-line></div>
+
+  <!-- Шапка документа -->
+
+  <header class="header container flex align-center justify-between gap-5 sticky zi-3 py-2 linear duration-3" data-header>
+    <button class="btn btn--primary d-lg-none text-38 radius-2" data-burger data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#burger">
+      </use></svg>
+    </button>
+    <a class="header__logo btn btn--primary radius-1" href="/" data-waved>
+      <picture>
+        <source srcset="img/pictures/logo.webp" type="image/webp">
+        <img class="w-100" src="img/pictures/logo.png" alt="">
+      </picture>
+    </a>
+    <nav class="d-none d-lg-flex align-center justify-between gap-5 mx-auto">
+      <a class="btn btn--second link color-black bold-4 radius-2 py-2 px-3" data-waved data-scroll="top" href="#about">About Event</a>
+      <a class="btn btn--second link color-black bold-4 radius-2 py-2 px-3" data-waved data-scroll="top" href="#exhibit">Exhibit</a>
+      <a class="btn btn--second link color-black bold-4 radius-2 py-2 px-3" data-waved data-scroll="top" href="#visit">Visit</a>
+      <a class="btn btn--second link color-black bold-4 radius-2 py-2 px-3" data-waved data-scroll="top" href="#contacts">Contacts</a>
+    </nav>
+    <a class="d-none d-md-flex btn btn--second color-black bold-8 radius-2 p-2" data-waved href="tel: + 90 216 922 02 13">+ 90 216 922 02 13</a>
+    <div class="header__accordion relative" data-accordion="hidden" data-accordion-close="scroll">
+      <button class="btn btn--primary radius-1 p-2" data-waved data-accordion-toggle>
+        <img class="icon text-24 mr-2" src="img/pictures/en.svg" alt="">
+        <svg class="header__arrow icon color-black text-10 fade-60 ease duration-3">
+          <use xlink:href="img/icons.svg#arrow">
+        </use></svg>
+      </button>
+      <div class="header__content absolute" data-accordion-content>
+        <div class="flex flex-column bg-white radius-4 p-3">
+          <button class="btn btn--second justify-start radius-2 w-100 py-2 px-3">
+            <img class="icon text-24 mr-2" src="img/pictures/en.svg" alt="">
+            <span class="color-black text-16 bold-4">en</span>
+          </button>
+          <button class="btn btn--second justify-start radius-2 w-100 py-2 px-3">
+            <img class="icon text-24 mr-2" src="img/pictures/turk.svg" alt="">
+            <span class="color-black text-16 bold-4">tr</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <input class="switch switch--toggle d-none d-lg-block" data-theme="toggle" type="checkbox">
+  </header>
+
+  <!-- Мобильное меню -->
+
+  <section class="mobile fixed zi-6 w-100 h-100 ease duration-1" data-mobile="hidden" data-theme="light">
+    <div class="mobile__content flex flex-column bg-black overflow-auto w-100 h-100 ease duration-3">
+      <div class="mobile__head flex align-center justify-between gap-2 relative p-4 ease duration-5 delay-3">
+        <button class="btn btn--second text-24 radius-2" data-mobile-close data-waved>
+          <svg class="icon color-white">
+            <use xlink:href="img/icons.svg#close">
+          </use></svg>
+        </button>
+        <a class="mobile__logo btn btn--primary radius-1" href="/" data-waved>
+          <picture>
+            <source srcset="img/pictures/logo-white.webp" type="image/webp">
+            <img class="w-100" src="img/pictures/logo-white.png" alt="">
+          </picture>
+        </a>
+        <input class="switch switch--toggle" data-theme="toggle" type="checkbox">
+      </div>
+      <div class="mobile__nav flex flex-column gap-6 relative color-white mb-10 px-4 py-7 ease duration-9 delay-5">
+        <a class="font-alt link text-24 bold-5 w-max" data-scroll="top" href="#about">About Event</a>
+        <a class="font-alt link text-24 bold-5 w-max" data-scroll="top" href="#exhibit">Exhibit</a>
+        <a class="font-alt link text-24 bold-5 w-max" data-scroll="top" href="#visit">Visit</a>
+        <a class="font-alt link text-24 bold-5 w-max" data-scroll="top" href="#contacts">Contacts</a>
+      </div>
+      <div class="mobile__footer relative mt-auto px-4 pt-4 pb-10 ease duration-5 delay-9">
+        <div class="flex align-center justify-center gap-4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Главный блок -->
+<main class="main container flex align-center justify-center relative bg-grey overflow-hidden" data-theme="light">
+  <div class="bg-block">
+    <div class="pack pack--rect w-100 h-100 linear duration-10 anim anim--decrease" data-anim="hidden">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </use></svg>
+        </span>
+      </div>
+      <video class="image" src="media/video.mp4" poster="img/pictures/main-bg.jpg" autoplay loop muted></video>
+    </div>
+  </div>
+  <div class="flex flex-column align-center justify-center relative color-white w-100 h-100">
+    <div class="main__pack pack pack--rect w-100 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+      <picture>
+        <source srcset="img/pictures/logo-main.webp" type="image/webp">
+        <img class="image image--sd" src="img/pictures/logo-main.png" alt="">
+      </picture>
+    </div>
+    <h1 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-3 mb-md-6 ease-in-out duration-4 delay-2 anim anim--up" data-movement="blend" data-anim="hidden">SEAFOOD EXPO EURASIA <br class="d-none d-md-block">DECEMBER 7-9, 2023</h1>
+    <h3 class="text text--center text-14 text-md-16 bold-7 lh-2 mb-10 ease-in-out duration-4 delay-4 anim anim--up" data-movement="blend" data-anim="hidden">Istanbul, Tuyap</h3>
+    <div class="w-100 ease-in-out duration-4 delay-6 anim anim--up" data-anim="hidden">
+      <button class="main__btn btn btn--primary btn--lg btn--fill w-100 mx-auto" data-bubbles="hidden" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-iframe.html">Book a stand</button>
+    </div>
+  </div>
+</main>
+
+<!-- О нас -->
+
+<section class="about container container--sm bg-grey overflow-hidden" id="about">
+  <div class="about__grid grid gap-4 gap-md-7 gap-lg-5">
+    <div class="col-12 col-lg-6 row-lg-2 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+      <div class="about__block card h-100 py-7 px-5 px-md-7 py-lg-10 px-lg-10" data-movement="blend">
+        <h2 class="font-alt text text--uppercase text-26 text-md-30 text-lg-34 bold-7 lh-3 mb-5 mb-md-8">INTERNATIONAL EXHIBITION FOR FISHERY, PROCESSING AND AQUACULTURE</h2>
+        <p class="text-14 text-md-16 bold-4 lh-5 mb-5">
+          SEAFOOD EXPO EURASIA is a new event for communication between people involved in fishery business and spheres which are closely related to it. Aimed at bringing fresh thinking towards world fishery community the exhibition will unite fishery, aquaculture, processing, shipbuilding, logistic & packaging companies.
+        </p>
+        <p class="text-14 text-md-16 bold-4 lh-5">
+          The new show is based upon “business beyond politics principle”. Free from political and geographical borders the event is designed to unite the countries of Europe and Asia, Africa and Latin America within one place.
+        </p>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 row-lg-1 ease-in-out duration-5 anim anim--left" data-anim="hidden">
+      <div class="about__item relative radius-6 overflow-hidden h-100" data-theme="light" data-movement="light">
+        <div class="bg-block">
+          <div class="pack pack--rect bg-second w-100 h-100">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </use></svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/welcome.webp" type="image/webp">
+              <img class="image" loading="lazy" src="img/pictures/welcome.jpg" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="about__bg relative color-white h-100 py-10 px-5 px-lg-7">
+          <h3 class="text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-5">THE EVENT THAT <br> <span class="color-primary">UNITES</span> CONTINENTS</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 row-lg-1 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <div class="about__item bg-black relative radius-6 overflow-hidden h-100" data-theme="light" data-movement="light">
+        <div class="bg-block">
+          <div class="pack pack--box h-100">
+            <picture>
+              <source srcset="img/pictures/build-green.webp" type="image/webp">
+              <img class="image" loading="lazy" src="img/pictures/build-green.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="relative color-light h-100 py-5 px-5 py-lg-10 px-lg-7">
+          <h3 class="text text--uppercase text-12 text-md-20 text-lg-22 bold-7 lh-5">perfect platform to promote new products</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 row-lg-1 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <div class="about__item pack pack--half radius-6 w-100 h-100" data-movement="light">
+        <div class="loader">
+          <span class="loader-progress">
+            <svg class="loader-icon icon">
+              <use xlink:href="img/icons.svg#loader">
+            </use></svg>
+          </span>
+        </div>
+        <picture>
+          <source srcset="img/pictures/people.webp" type="image/webp">
+          <img class="image image--rise" loading="lazy" src="img/pictures/people.png" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Экспорт -->
+
+
+
+<section class="expo container gradient flex flex-column align-center justify-center overflow-hidden">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-4 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">GLOBAL FISHERY FORUM & SEAFOOD EXPO EURASIA</h2>
+  <h3 class="text text--center text--uppercase text-14 text-md-16 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">December 7-9, 2023, Istanbul, Tuyap</h3>
+  <div class="expo-slider relative w-100 pt-lg-5 ease-in-out duration-4 anim anim--left" data-anim="hidden">
+    <div class="expo-swiper swiper swiper--overwrap overflow-visible">
+      <div class="swiper-wrapper">
+        
+          <div class="expo-slide swiper-slide card bg-blue h-100" data-theme="light">
+            <div class="bg-block">
+              <div class="pack pack--rect">
+                <picture>
+                  <source srcset="img/pictures/expo-1.webp" type="image/webp">
+                  <img class="image image--tr" loading="lazy" src="img/pictures/expo-1.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="card-content relative py-10 px-8" data-movement="light">
+              <h3 class="color-white text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-4 mb-5 mb-md-10">Aquaculture</h3>
+              <div class="flex flex-column mt-auto">
+                <span class="bg-akva color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2 mb-1">equipment</span>
+                <span class="bg-akva color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2">farming technologies</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="expo-slide swiper-slide card bg-grey h-100" data-theme="light">
+            <div class="bg-block">
+              <div class="pack pack--rect">
+                <picture>
+                  <source srcset="img/pictures/expo-2.webp" type="image/webp">
+                  <img class="image image--tr" loading="lazy" src="img/pictures/expo-2.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="card-content relative py-10 px-8" data-movement="light">
+              <h3 class="color-black text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-4 mb-5 mb-md-10">Catching <br> and processing</h3>
+              <div class="flex flex-column mt-auto">
+                <span class="bg-primary color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2 mb-1">LEADING COMPANIES</span>
+                <span class="bg-primary color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2">BEST PROCESSING PRACTICIES</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="expo-slide swiper-slide card bg-black h-100" data-theme="light">
+            <div class="bg-block">
+              <div class="pack pack--rect">
+                <picture>
+                  <source srcset="img/pictures/expo-3.webp" type="image/webp">
+                  <img class="image image--tr" loading="lazy" src="img/pictures/expo-3.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="card-content relative py-10 px-8" data-movement="light">
+              <h3 class="color-white text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-4 mb-5 mb-md-10">SHIPBUILDING <br> AND SHIP REPAIR</h3>
+              <div class="flex flex-column mt-auto">
+                <span class="bg-white color-black text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2 mb-1">SHIP YARD</span>
+                <span class="bg-white color-black text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2">ENGINEERING BUREAU</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="expo-slide swiper-slide card bg-blue h-100" data-theme="light">
+            <div class="bg-block">
+              <div class="pack pack--rect">
+                <picture>
+                  <source srcset="img/pictures/expo-4.webp" type="image/webp">
+                  <img class="image image--tr" loading="lazy" src="img/pictures/expo-4.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="card-content relative py-10 px-8" data-movement="light">
+              <h3 class="color-white text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-4 mb-5 mb-md-10">Equipment <br> & Components</h3>
+              <div class="flex flex-column mt-auto">
+                <span class="bg-akva color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2 mb-1">Packaging</span>
+                <span class="bg-akva color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2">Refrigeration</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="expo-slide swiper-slide card bg-white h-100" data-theme="light">
+            <div class="bg-block">
+              <div class="pack pack--rect">
+                <picture>
+                  <source srcset="img/pictures/expo-5.webp" type="image/webp">
+                  <img class="image image--tr" loading="lazy" src="img/pictures/expo-5.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="card-content relative py-10 px-8" data-movement="light">
+              <h3 class="color-black text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-4 mb-5 mb-md-10">PRODUCT <br> DISTRIBUTION</h3>
+              <div class="flex flex-column mt-auto">
+                <span class="bg-primary color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2 mb-1">TRADING</span>
+                <span class="bg-primary color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2">RETAIL</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="expo-slide swiper-slide card bg-black h-100" data-theme="light">
+            <div class="bg-block">
+              <div class="pack pack--rect">
+                <picture>
+                  <source srcset="img/pictures/expo-6.webp" type="image/webp">
+                  <img class="image image--tr" loading="lazy" src="img/pictures/expo-6.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="card-content relative py-10 px-8" data-movement="light">
+              <h3 class="color-white text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-4 mb-5 mb-md-10">Deep Processed <br> Products</h3>
+              <div class="flex flex-column mt-auto">
+                <span class="bg-white color-black text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2 mb-1">Canned products</span>
+                <span class="bg-white color-black text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2">Ready-to-cook</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="expo-slide swiper-slide card bg-blue h-100" data-theme="light">
+            <div class="bg-block">
+              <div class="pack pack--rect">
+                <picture>
+                  <source srcset="img/pictures/expo-7.webp" type="image/webp">
+                  <img class="image image--tr" loading="lazy" src="img/pictures/expo-7.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="card-content relative py-10 px-8" data-movement="light">
+              <h3 class="color-white text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-4 mb-5 mb-md-10">LOGISTICS <br> AND STORAGE</h3>
+              <div class="flex flex-column mt-auto">
+                <span class="bg-akva color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2 mb-1">Cargo shipping</span>
+                <span class="bg-akva color-white text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2">Storage</span>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <div class="swiper-pagination d-flex d-md-none color-primary mt-10"></div>
+    <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-left">
+      </use></svg>
+    </button>
+    <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-right">
+      </use></svg>
+    </button>
+  </div>
+</section>
+
+<!-- Платформа -->
+
+<section class="platform container bg-grey py-10">
+  <div class="ease-in-out duration-4 delay-3 anim anim--down" data-anim="hidden">
+    <div class="card py-6 px-5 py-lg-8 px-lg-8" data-movement="blend">
+      <h2 class="font-alt text text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-4">global platform</h2>
+      <p class="text-14 text-md-16 bold-4 lh-5">
+        The exposition of 20,000 sqm will be arranged in two halls subject to the product groups presented by exhibitors, which will make it logical and convenient for visitors and thus enhance the efficiency of communication onsite.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Шоу -->
+
+
+
+<section class="show container relative" data-theme="light">
+  <div class="show__bg bg-block">
+    <div class="pack pack--rect w-100 h-100">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </use></svg>
+        </span>
+      </div>
+      <picture>
+        <source srcset="img/pictures/water-bg.webp" type="image/webp">
+        <img class="image" loading="lazy" src="img/pictures/water-bg.jpg" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="flex flex-column align-center justify-center relative color-white">
+    <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden" data-movement="blend">NEW SHOW FOR THE WHOLE WORLD COMMUNITY</h2>
+    <div class="grid gap-4 gap-md-6 gap-lg-8 w-100 pt-lg-5">
+      
+        <div class="col-12 col-lg-4 ease duration-4 anim anim--right" data-anim="hidden">
+          <div class="show__card card bg-none h-100 py-7 px-5 py-md-10 px-md-10" data-movement="light">
+            <h3 class="text text--uppercase text-14 text-md-16 bold-6 lh-2 mb-4 mb-md-6">VENUE</h3>
+            <h4 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">20 000 м<sup>2</sup></h4>
+            <p class="text-14 text-md-16 bold-3 lh-4">of exhibition space</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-lg-4 delay-lg-2 ease duration-4 anim anim--right" data-anim="hidden">
+          <div class="show__card card bg-none h-100 py-7 px-5 py-md-10 px-md-10" data-movement="light">
+            <h3 class="text text--uppercase text-14 text-md-16 bold-6 lh-2 mb-4 mb-md-6">PARTICIPANTS</h3>
+            <h4 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">120+countries</h4>
+            <p class="text-14 text-md-16 bold-3 lh-4">Representatives of 120+ countriesare expected to take part in the event</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-lg-4 delay-lg-4 ease duration-4 anim anim--right" data-anim="hidden">
+          <div class="show__card card bg-none h-100 py-7 px-5 py-md-10 px-md-10" data-movement="light">
+            <h3 class="text text--uppercase text-14 text-md-16 bold-6 lh-2 mb-4 mb-md-6">proficient target audience</h3>
+            <h4 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">46%</h4>
+            <p class="text-14 text-md-16 bold-3 lh-4">of visitors are business owners, CEO and top managers</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Экспонат -->
+
+
+
+<section class="exhibit container flex flex-column align-center justify-center bg-grey pt-lg-10" id="exhibit">
+  <div class="mb-10 ease-in-out duration-4 delay-3 anim anim--down" data-anim="hidden">
+    <div class="card w-100 py-6 px-5 py-lg-8 px-lg-8" data-movement="blend">
+      <h2 class="font-alt text text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-4">IN SAKE OF BUSINESS</h2>
+      <p class="text-14 text-md-16 bold-4 lh-5">
+        SEAFOOD EXPO EURASIA welcomes both renowned industry leaders and ambitious new names to stimulate an open dialogue and provide enormous opportunities for business growth.
+      </p>
+    </div>
+  </div>
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">WHY PARTICIPATE IN SEAFOOD EXPO Eurasia?</h2>
+  <div class="grid gap-4 gap-md-6 gap-lg-8 w-100 py-lg-10">
+    
+      <div class="col-12 col-lg-6 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="card flex-row align-center justify-between gap-5 gap-lg-10 p-2 p-md-4 p-lg-6" data-waved>
+          <div class="card-content pl-2 pl-md-5" data-movement="blend">
+            <h3 class="text text--uppercase text-14 text-md-20 text-lg-22 bold-7 lh-3 mb-3">MEET THE WHOLE WORLD <br class="d-none d-md-block"> FOR 3 DAYS</h3>
+            <p class="text-12 text-md-16 bold-4 lh-5">New clients from all continents</p>
+          </div>
+          <div class="exhibit__number flex align-center justify-center radius-6 text-20 text-md-48 w-100">
+            <h4 class="font-alt color-blue text text--uppercase text--center bold-5 zoom-2">1</h4>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-lg-6 delay-lg-2 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="card flex-row align-center justify-between gap-5 gap-lg-10 p-2 p-md-4 p-lg-6" data-waved>
+          <div class="card-content pl-2 pl-md-5" data-movement="blend">
+            <h3 class="text text--uppercase text-14 text-md-20 text-lg-22 bold-7 lh-3 mb-3">NEW CHALLENGES REQUIRE NEW SOLUTIONS</h3>
+            <p class="text-12 text-md-16 bold-4 lh-5">Fresh thinking in current geopolitical context</p>
+          </div>
+          <div class="exhibit__number flex align-center justify-center radius-6 text-20 text-md-48 w-100">
+            <h4 class="font-alt color-blue text text--uppercase text--center bold-5 zoom-2">2</h4>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-lg-6 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="card flex-row align-center justify-between gap-5 gap-lg-10 p-2 p-md-4 p-lg-6" data-waved>
+          <div class="card-content pl-2 pl-md-5" data-movement="blend">
+            <h3 class="text text--uppercase text-14 text-md-20 text-lg-22 bold-7 lh-3 mb-3">BUSINESS ORIENTED</h3>
+            <p class="text-12 text-md-16 bold-4 lh-5">Aimed to meet the interest of fishery companies</p>
+          </div>
+          <div class="exhibit__number flex align-center justify-center radius-6 text-20 text-md-48 w-100">
+            <h4 class="font-alt color-blue text text--uppercase text--center bold-5 zoom-2">3</h4>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-lg-6 delay-lg-2 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="card flex-row align-center justify-between gap-5 gap-lg-10 p-2 p-md-4 p-lg-6" data-waved>
+          <div class="card-content pl-2 pl-md-5" data-movement="blend">
+            <h3 class="text text--uppercase text-14 text-md-20 text-lg-22 bold-7 lh-3 mb-3">UP TO DATE</h3>
+            <p class="text-12 text-md-16 bold-4 lh-5">Perfect time to make plans for the future</p>
+          </div>
+          <div class="exhibit__number flex align-center justify-center radius-6 text-20 text-md-48 w-100">
+            <h4 class="font-alt color-blue text text--uppercase text--center bold-5 zoom-2">4</h4>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+<!-- Посещение -->
+
+
+
+<section class="visit container flex flex-column align-center justify-center" id="visit">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">VISITING SEAFOOD EXPO EURASIA YOU CAN:</h2>
+  <div class="grid gap-3 gap-md-5 gap-lg-7 w-100">
+    
+      <div class="col-12 col-md-6 col-lg-4 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="visit__card card bg-blue h-100 py-10 px-5 px-md-10" data-movement="light" data-theme="light">
+          <div class="card-content flex-column justify-center text text--uppercase h-100">
+            <h3 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">Find</h3>
+            <p class="color-white text-14 text-md-16 bold-7 lh-8">new buyers and suppliers from all over the world</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-md-6 col-lg-4 delay-lg-2 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="visit__card card bg-blue h-100 py-10 px-5 px-md-10" data-movement="light" data-theme="light">
+          <div class="card-content flex-column justify-center text text--uppercase h-100">
+            <h3 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">Choose</h3>
+            <p class="color-white text-14 text-md-16 bold-7 lh-8">modern technologies and solutions for your business</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-md-6 col-lg-4 delay-lg-4 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="visit__card card bg-blue h-100 py-10 px-5 px-md-10" data-movement="light" data-theme="light">
+          <div class="card-content flex-column justify-center text text--uppercase h-100">
+            <h3 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">Save</h3>
+            <p class="color-white text-14 text-md-16 bold-7 lh-8">your time and resources for searching new partners and clients</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-md-6 col-lg-4 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="visit__card card bg-blue h-100 py-10 px-5 px-md-10" data-movement="light" data-theme="light">
+          <div class="card-content flex-column justify-center text text--uppercase h-100">
+            <h3 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">Run</h3>
+            <p class="color-white text-14 text-md-16 bold-7 lh-8">into new distribution channels</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-md-6 col-lg-4 delay-lg-2 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="visit__card card bg-blue h-100 py-10 px-5 px-md-10" data-movement="light" data-theme="light">
+          <div class="card-content flex-column justify-center text text--uppercase h-100">
+            <h3 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">Meet</h3>
+            <p class="color-white text-14 text-md-16 bold-7 lh-8">your potential clients face to face</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-md-6 col-lg-4 delay-lg-4 ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="visit__card card bg-blue h-100 py-10 px-5 px-md-10" data-movement="light" data-theme="light">
+          <div class="card-content flex-column justify-center text text--uppercase h-100">
+            <h3 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2">Promote</h3>
+            <p class="color-white text-14 text-md-16 bold-7 lh-8">YOUR PRODUCTS AND SERVICES</p>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+<!-- Мероприятия -->
+
+<section class="events container bg-grey overflow-hidden">
+  <div class="card p-3 p-md-6">
+    <div class="grid gap-lg-10 ease-in-out duration-4 anim anim--right" data-anim="hidden">
+      <div class="col-12 col-lg-6">
+        <div class="events__pack pack pack--half radius-6 w-100 h-100" data-movement="light">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </use></svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/town.webp" type="image/webp">
+            <img class="image image--rise" loading="lazy" src="img/pictures/town.png" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 ease-in-out duration-4 anim anim--left" data-anim="hidden">
+        <div class="card-content py-5 pl-4 pr-4 py-lg-0 pl-lg-0 pr-lg-10" data-movement="blend">
+          <h3 class="text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-5 mb-3">Tüyap Fair and Congress Center, Pavilions 11, 12</h3>
+          <p class="text-14 text-md-16 bold-4 lh-5 mb-5">Cumhuriyet Mahallesi, Eski Hadimkoy Yolu Caddesi No: 9/1 Buyukcekmece, Istanbul</p>
+          <h4 class="text-16 text-md-18 text-lg-20 bold-7 lh-5 mb-5">Opening hours for visitors:</h4>
+          <div class="flex flex-column gap-3">
+            <div class="events__item flex align-center pb-3">
+              <span class="flex-grow text-14 text-md-16 bold-4 fade-60 mr-5">December 7</span>
+              <span class="flex-grow text-14 text-md-16 bold-4">10:00 - 18:00</span>
+            </div>
+            <div class="events__item flex align-center pb-3">
+              <span class="flex-grow text-14 text-md-16 bold-4 fade-60 mr-5">December 7</span>
+              <span class="flex-grow text-14 text-md-16 bold-4">10:00 - 18:00</span>
+            </div>
+            <div class="events__item flex align-center pb-3">
+              <span class="flex-grow text-14 text-md-16 bold-4 fade-60 mr-5">December 7</span>
+              <span class="flex-grow text-14 text-md-16 bold-4">10:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Карта -->
+
+  <section class="map relative bg-blue overflow-hidden" id="contacts">
+    <div class="loader">
+      <span class="loader-progress">
+        <svg class="loader-icon icon">
+          <use xlink:href="img/icons.svg#loader">
+        </use></svg>
+      </span>
+    </div>
+    <iframe class="bg-block border-none w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d96318.1992719619!2d28.576282942474467!3d41.0264870608853!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55ee2d0fd06bf%3A0x709578caeb4c6f62!2sT%C3%BCyap%20Fair%20Convention%20and%20Congress%20Center!5e0!3m2!1sru!2sru!4v1679657783383!5m2!1sru!2sru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+    
+  <!-- Подвал -->
+
+  <footer class="footer container container--sm relative bg-blue overflow-hidden pt-10" data-theme="light">
+    <div class="bg-block fade-20">
+      <div class="pack pack--rect w-100 h-100">
+        <picture>
+          <source srcset="img/pictures/build.webp" type="image/webp">
+          <img class="image" loading="lazy" src="img/pictures/build.png" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-between gap-5 gap-md-7 gap-lg-10 relative color-white">
+      <div class="flex flex-column order-1 w-100 w-md-auto">
+        <a class="footer__logo btn btn--second radius-1 mb-4" href="/" data-waved>
+          <picture>
+            <source srcset="img/pictures/logo-white.webp" type="image/webp">
+            <img class="w-100" src="img/pictures/logo-white.png" alt="">
+          </picture>
+        </a>
+        <p class="text-16 bold-4 mb-3">Istanbul, Tuyap</p>
+        <p class="text-16 bold-4 mb-5 mb-md-10">December 7-9, 2023</p>
+        <p class="text-14 bold-4 lh-5 fade-60 mb-7 mb-md-10">
+          Seafood Expo Eurasia is a new international <br class="d-none d-md-block">
+          exhibition for companies involved in fishery, <br class="d-none d-md-block">
+          aquaculture, processing and shipbuilding sectors
+        </p>
+        <p class="text-14 bold-6">© 2023 SED Fuarcılık Limited Şirketi</p>
+      </div>
+      <div class="flex flex-column order-2 order-md-3 order-lg-2 w-100 w-md-auto">
+        <h3 class="text text--uppercase text-18 text-md-20 text-lg-22 bold-7 mb-6">Navigation</h3>
+        <nav class="flex flex-column gap-4">
+          <a class="btn btn--second link radius-1 color-white bold-4 w-max p-1" data-waved data-scroll="top" href="#about">About Event</a>
+          <a class="btn btn--second link radius-1 color-white bold-4 w-max p-1" data-waved data-scroll="top" href="#exhibit">Exhibit</a>
+          <a class="btn btn--second link radius-1 color-white bold-4 w-max p-1" data-waved data-scroll="top" href="#visit">Visit</a>
+          <a class="btn btn--second link radius-1 color-white bold-4 w-max p-1" data-waved data-scroll="top" href="#contacts">Contacts</a>
+        </nav>
+      </div>
+      <div class="flex flex-column order-3 order-md-2 order-lg-3 w-100 w-md-auto">
+        <h3 class="text text--uppercase text-18 text-md-20 text-lg-22 bold-7 mb-6">contacts</h3>
+        <p class="text text--uppercase text-16 bold-3 mb-5">SED Fuarcılık Limited Şirketi</p>
+        <a class="btn btn--second link-wrapper radius-1 color-white w-max mb-5" data-waved href="tel: + 90 216 922 02 13">
+          <svg class="icon text-22 text-lg-26 mr-2">
+            <use xlink:href="img/icons.svg#tel">
+          </use></svg>
+          <span class="link text-18 text-md-20 text-lg-22 bold-7">+ 90 216 922 02 13</span>
+        </a>
+        <a class="btn btn--second link color-white text text--uppercase bold-7 radius-1 w-max" data-waved href="mailto: info@seafoodexpoeurasia.COM">info@seafoodexpoeurasia.COM</a>
+      </div>
+      <div class="flex flex-column order-4 w-100 w-md-auto">
+        <a class="btn btn--second text-50 radius-2 w-max p-2" data-waved href="">
+          <div class="pack pack--box icon zoom-2">
+            <picture>
+              <source srcset="img/pictures/sed.webp" type="image/webp">
+              <img class="image image--sd" src="img/pictures/sed.png" alt="">
+            </picture>
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

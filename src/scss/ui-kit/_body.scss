@@ -5,13 +5,33 @@ body {
 
   &:is([data-theme="dark"]) {
     --color-black: #FFFFFF;
-    --color-white: #20162C;
-    --color-grey : #303030;
+    --color-white: #160c22;
+    --color-grey : #07061f;
 
-    & :is([data-theme="light"], .btn) {
+    & :is([data-theme="light"]) {
       --color-black: #20162C;
       --color-white: #FFFFFF;
       --color-grey : #F7F7F8;
+    }
+
+    & .header {
+      background-color: var(--color-white);
+    }
+
+    & .about__bg {
+      background-image: linear-gradient(108.89deg, var(--color-black) 30.7%, var(--color-black-30) 100%);
+    }
+
+    & .show__bg {
+      opacity: 0.2;
+    }
+
+    & .visit__card {
+      background-color: var(--color-black);
+    }
+
+    & .footer {
+      background: var(--color-black);
     }
   }
 }

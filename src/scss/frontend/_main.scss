@@ -20,3 +20,103 @@
     }
   }
 }
+
+// О нас
+.about {
+  &__bg {
+    background-image: linear-gradient(108.89deg, var(--color-akva) 30.7%, var(--color-second-30) 100%);
+  }
+
+  @media(min-width: $xl) {
+    &__grid {
+      gap     : 32px;
+      grid-gap: 32px;
+    }
+
+    &__block {
+      padding: 56px 48px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__item {
+      min-height: 200px;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__item {
+      min-height: 170px;
+    }
+  }
+}
+
+// Экспорт
+.expo {
+  &-slide {
+    min-height: 270px;
+  }
+
+  @media(min-width: 2000px) {
+    &-swiper {
+      overflow: hidden;
+    }
+  }
+
+  @media(max-width: $md) {
+    &-slide {
+      min-height: 220px;
+    }
+  }
+}
+
+// Шоу
+.show {
+  &__card {
+    background-image: linear-gradient(107.73deg, var(--color-white-10) 0%, var(--color-white-10) 57.04%);
+    backdrop-filter : blur(6px);
+  }
+
+  @media(min-width: $lg) {
+    &__card {
+      padding-block: 60px;
+    }
+  }
+}
+
+// Экспонат
+.exhibit {
+  &__number {
+    max-width       : 110px;
+    height          : 160px;
+    background-image: linear-gradient(180deg, var(--color-second-10) 0%, var(--color-none) 100%);
+  }
+
+  @media(max-width: $md) {
+    &__number {
+      max-width: 70px;
+      height   : 80px;
+    }
+  }
+}
+
+// Мероприятия
+.events {
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px dashed var(--color-black-20);
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  @media(max-width: $sm) {
+    &__pack {
+      &::before {
+        padding-top: 75%;
+      }
+    }
+  }
+}

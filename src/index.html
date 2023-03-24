@@ -8,9 +8,9 @@
 <%= _.template(require('./includes/header.html').default)({data}) %>
 
 <!-- Главный блок -->
-<main class="main container flex align-center justify-center relative bg-second overflow-hidden">
+<main class="main container flex align-center justify-center relative bg-grey overflow-hidden" data-theme="light">
   <div class="bg-block">
-    <div class="pack pack--rect w-100 h-100">
+    <div class="pack pack--rect w-100 h-100 linear duration-10 anim anim--decrease" data-anim="hidden">
       <div class="loader">
         <span class="loader-progress">
           <svg class="loader-icon icon">
@@ -22,16 +22,410 @@
     </div>
   </div>
   <div class="flex flex-column align-center justify-center relative color-white w-100 h-100">
-    <div class="main__pack pack pack--rect w-100 mb-5 mb-md-10">
+    <div class="main__pack pack pack--rect w-100 mb-5 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden">
       <picture>
         <source srcset="img/pictures/logo-main.webp" type="image/webp">
         <img class="image image--sd" src="img/pictures/logo-main.png" alt="">
       </picture>
     </div>
-    <h1 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-3 mb-md-6">SEAFOOD EXPO EURASIA <br class="d-none d-md-block">DECEMBER 7-9, 2023</h1>
-    <h3 class="text text--center text-14 text-md-16 bold-7 lh-2 mb-10">Istanbul, Tuyap</h3>
-    <button class="main__btn btn btn--primary btn--lg btn--fill w-100" data-waved>Book a stand</button>
+    <h1 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-3 mb-md-6 ease-in-out duration-4 delay-2 anim anim--up" data-movement="blend" data-anim="hidden">SEAFOOD EXPO EURASIA <br class="d-none d-md-block">DECEMBER 7-9, 2023</h1>
+    <h3 class="text text--center text-14 text-md-16 bold-7 lh-2 mb-10 ease-in-out duration-4 delay-4 anim anim--up" data-movement="blend" data-anim="hidden">Istanbul, Tuyap</h3>
+    <div class="w-100 ease-in-out duration-4 delay-6 anim anim--up" data-anim="hidden">
+      <button class="main__btn btn btn--primary btn--lg btn--fill w-100 mx-auto" data-bubbles="hidden" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-iframe.html">Book a stand</button>
+    </div>
   </div>
 </main>
+
+<!-- О нас -->
+
+<section class="about container container--sm bg-grey overflow-hidden" id="about">
+  <div class="about__grid grid gap-4 gap-md-7 gap-lg-5">
+    <div class="col-12 col-lg-6 row-lg-2 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+      <div class="about__block card h-100 py-7 px-5 px-md-7 py-lg-10 px-lg-10" data-movement="blend">
+        <h2 class="font-alt text text--uppercase text-26 text-md-30 text-lg-34 bold-7 lh-3 mb-5 mb-md-8">INTERNATIONAL EXHIBITION FOR FISHERY, PROCESSING AND AQUACULTURE</h2>
+        <p class="text-14 text-md-16 bold-4 lh-5 mb-5">
+          SEAFOOD EXPO EURASIA is a new event for communication between people involved in fishery business and spheres which are closely related to it. Aimed at bringing fresh thinking towards world fishery community the exhibition will unite fishery, aquaculture, processing, shipbuilding, logistic & packaging companies.
+        </p>
+        <p class="text-14 text-md-16 bold-4 lh-5">
+          The new show is based upon “business beyond politics principle”. Free from political and geographical borders the event is designed to unite the countries of Europe and Asia, Africa and Latin America within one place.
+        </p>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 row-lg-1 ease-in-out duration-5 anim anim--left" data-anim="hidden">
+      <div class="about__item relative radius-6 overflow-hidden h-100" data-theme="light" data-movement="light">
+        <div class="bg-block">
+          <div class="pack pack--rect bg-second w-100 h-100">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/welcome.webp" type="image/webp">
+              <img class="image" loading="lazy" src="img/pictures/welcome.jpg" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="about__bg relative color-white h-100 py-10 px-5 px-lg-7">
+          <h3 class="text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-5">THE EVENT THAT <br> <span class="color-primary">UNITES</span> CONTINENTS</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 row-lg-1 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <div class="about__item bg-black relative radius-6 overflow-hidden h-100" data-theme="light" data-movement="light">
+        <div class="bg-block">
+          <div class="pack pack--box h-100">
+            <picture>
+              <source srcset="img/pictures/build-green.webp" type="image/webp">
+              <img class="image" loading="lazy" src="img/pictures/build-green.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="relative color-light h-100 py-5 px-5 py-lg-10 px-lg-7">
+          <h3 class="text text--uppercase text-12 text-md-20 text-lg-22 bold-7 lh-5">perfect platform to promote new products</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 row-lg-1 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <div class="about__item pack pack--half radius-6 w-100 h-100" data-movement="light">
+        <div class="loader">
+          <span class="loader-progress">
+            <svg class="loader-icon icon">
+              <use xlink:href="img/icons.svg#loader">
+            </svg>
+          </span>
+        </div>
+        <picture>
+          <source srcset="img/pictures/people.webp" type="image/webp">
+          <img class="image image--rise" loading="lazy" src="img/pictures/people.png" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Экспорт -->
+
+<% var expo = [
+  {
+    bg: 'blue',
+    img: '1',
+    color: 'white',
+    title: 'Aquaculture',
+    item: 'bg-akva color-white',
+    items: ['equipment', 'farming technologies']
+  },
+  {
+    bg: 'grey',
+    img: '2',
+    color: 'black',
+    title: 'Catching <br> and processing',
+    item: 'bg-primary color-white',
+    items: ['LEADING COMPANIES', 'BEST PROCESSING PRACTICIES']
+  },
+  {
+    bg: 'black',
+    img: '3',
+    color: 'white',
+    title: 'SHIPBUILDING <br> AND SHIP REPAIR',
+    item: 'bg-white color-black',
+    items: ['SHIP YARD', 'ENGINEERING BUREAU']
+  },
+  {
+    bg: 'blue',
+    img: '4',
+    color: 'white',
+    title: 'Equipment <br> & Components',
+    item: 'bg-akva color-white',
+    items: ['Packaging', 'Refrigeration']
+  },
+  {
+    bg: 'white',
+    img: '5',
+    color: 'black',
+    title: 'PRODUCT <br> DISTRIBUTION',
+    item: 'bg-primary color-white',
+    items: ['TRADING', 'RETAIL']
+  },
+  {
+    bg: 'black',
+    img: '6',
+    color: 'white',
+    title: 'Deep Processed <br> Products',
+    item: 'bg-white color-black',
+    items: ['Canned products', 'Ready-to-cook']
+  },
+  {
+    bg: 'blue',
+    img: '7',
+    color: 'white',
+    title: 'LOGISTICS <br> AND STORAGE',
+    item: 'bg-akva color-white',
+    items: ['Cargo shipping', 'Storage']
+  }
+] %>
+
+<section class="expo container gradient flex flex-column align-center justify-center overflow-hidden">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-4 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">GLOBAL FISHERY FORUM & SEAFOOD EXPO EURASIA</h2>
+  <h3 class="text text--center text--uppercase text-14 text-md-16 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">December 7-9, 2023, Istanbul, Tuyap</h3>
+  <div class="expo-slider relative w-100 pt-lg-5 ease-in-out duration-4 anim anim--left" data-anim="hidden">
+    <div class="expo-swiper swiper swiper--overwrap overflow-visible">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < expo.length; i++) { %>
+          <div class="expo-slide swiper-slide card bg-<%= expo[i].bg %> h-100" data-theme="light">
+            <div class="bg-block">
+              <div class="pack pack--rect">
+                <picture>
+                  <source srcset="img/pictures/expo-<%= expo[i].img %>.webp" type="image/webp">
+                  <img class="image image--tr" loading="lazy" src="img/pictures/expo-<%= expo[i].img %>.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="card-content relative py-10 px-8" data-movement="light">
+              <h3 class="color-<%= expo[i].color %> text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-4 mb-5 mb-md-10"><%= expo[i].title %></h3>
+              <div class="flex flex-column mt-auto">
+                <span class="<%= expo[i].item %> text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2 mb-1"><%= expo[i].items[0] %></span>
+                <span class="<%= expo[i].item %> text text--center text--uppercase text-14 bold-6 radius-6 w-max py-1 px-2"><%= expo[i].items[1] %></span>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="swiper-pagination d-flex d-md-none color-primary mt-10"></div>
+    <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-left">
+      </svg>
+    </button>
+    <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-right">
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- Платформа -->
+
+<section class="platform container bg-grey py-10">
+  <div class="ease-in-out duration-4 delay-3 anim anim--down" data-anim="hidden">
+    <div class="card py-6 px-5 py-lg-8 px-lg-8" data-movement="blend">
+      <h2 class="font-alt text text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-4">global platform</h2>
+      <p class="text-14 text-md-16 bold-4 lh-5">
+        The exposition of 20,000 sqm will be arranged in two halls subject to the product groups presented by exhibitors, which will make it logical and convenient for visitors and thus enhance the efficiency of communication onsite.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Шоу -->
+
+<% var show = [
+  {
+    item: '',
+    title: 'VENUE',
+    subtitle: '20 000 м<sup>2</sup>',
+    text: 'of exhibition space'
+  },
+  {
+    item: 'delay-lg-2',
+    title: 'PARTICIPANTS',
+    subtitle: '120+countries',
+    text: 'Representatives of 120+ countriesare expected to take part in the event'
+  },
+  {
+    item: 'delay-lg-4',
+    title: 'proficient target audience',
+    subtitle: '46%',
+    text: 'of visitors are business owners, CEO and top managers'
+  }
+] %>
+
+<section class="show container relative" data-theme="light">
+  <div class="show__bg bg-block">
+    <div class="pack pack--rect w-100 h-100">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </svg>
+        </span>
+      </div>
+      <picture>
+        <source srcset="img/pictures/water-bg.webp" type="image/webp">
+        <img class="image" loading="lazy" src="img/pictures/water-bg.jpg" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="flex flex-column align-center justify-center relative color-white">
+    <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-anim="hidden" data-movement="blend">NEW SHOW FOR THE WHOLE WORLD COMMUNITY</h2>
+    <div class="grid gap-4 gap-md-6 gap-lg-8 w-100 pt-lg-5">
+      <% for (var i = 0; i < show.length; i++) { %>
+        <div class="col-12 col-lg-4 <%= show[i].item %> ease duration-4 anim anim--right" data-anim="hidden">
+          <div class="show__card card bg-none h-100 py-7 px-5 py-md-10 px-md-10" data-movement="light">
+            <h3 class="text text--uppercase text-14 text-md-16 bold-6 lh-2 mb-4 mb-md-6"><%= show[i].title %></h3>
+            <h4 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2"><%= show[i].subtitle %></h4>
+            <p class="text-14 text-md-16 bold-3 lh-4"><%= show[i].text %></p>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Экспонат -->
+
+<% var exhibit = [
+  {
+    item: '',
+    title: 'MEET THE WHOLE WORLD <br class="d-none d-md-block"> FOR 3 DAYS',
+    text: 'New clients from all continents',
+    number: '1'
+  },
+  {
+    item: 'delay-lg-2',
+    title: 'NEW CHALLENGES REQUIRE NEW SOLUTIONS',
+    text: 'Fresh thinking in current geopolitical context',
+    number: '2'
+  },
+  {
+    item: '',
+    title: 'BUSINESS ORIENTED',
+    text: 'Aimed to meet the interest of fishery companies',
+    number: '3'
+  },
+  {
+    item: 'delay-lg-2',
+    title: 'UP TO DATE',
+    text: 'Perfect time to make plans for the future',
+    number: '4'
+  }
+] %>
+
+<section class="exhibit container flex flex-column align-center justify-center bg-grey pt-lg-10" id="exhibit">
+  <div class="mb-10 ease-in-out duration-4 delay-3 anim anim--down" data-anim="hidden">
+    <div class="card w-100 py-6 px-5 py-lg-8 px-lg-8" data-movement="blend">
+      <h2 class="font-alt text text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-4">IN SAKE OF BUSINESS</h2>
+      <p class="text-14 text-md-16 bold-4 lh-5">
+        SEAFOOD EXPO EURASIA welcomes both renowned industry leaders and ambitious new names to stimulate an open dialogue and provide enormous opportunities for business growth.
+      </p>
+    </div>
+  </div>
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">WHY PARTICIPATE IN SEAFOOD EXPO Eurasia?</h2>
+  <div class="grid gap-4 gap-md-6 gap-lg-8 w-100 py-lg-10">
+    <% for (var i = 0; i < exhibit.length; i++) { %>
+      <div class="col-12 col-lg-6 <%= exhibit[i].item %> ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="card flex-row align-center justify-between gap-5 gap-lg-10 p-2 p-md-4 p-lg-6" data-waved>
+          <div class="card-content pl-2 pl-md-5" data-movement="blend">
+            <h3 class="text text--uppercase text-14 text-md-20 text-lg-22 bold-7 lh-3 mb-3"><%= exhibit[i].title %></h3>
+            <p class="text-12 text-md-16 bold-4 lh-5"><%= exhibit[i].text %></p>
+          </div>
+          <div class="exhibit__number flex align-center justify-center radius-6 text-20 text-md-48 w-100">
+            <h4 class="font-alt color-blue text text--uppercase text--center bold-5 zoom-2"><%= exhibit[i].number %></h4>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<!-- Посещение -->
+
+<% var visit = [
+  {
+    item: '',
+    title: 'Find',
+    text: 'new buyers and suppliers from all over the world'
+  },
+  {
+    item: 'delay-lg-2',
+    title: 'Choose',
+    text: 'modern technologies and solutions for your business'
+  },
+  {
+    item: 'delay-lg-4',
+    title: 'Save',
+    text: 'your time and resources for searching new partners and clients'
+  },
+  {
+    item: '',
+    title: 'Run',
+    text: 'into new distribution channels'
+  },
+  {
+    item: 'delay-lg-2',
+    title: 'Meet',
+    text: 'your potential clients face to face'
+  },
+  {
+    item: 'delay-lg-4',
+    title: 'Promote',
+    text: 'YOUR PRODUCTS AND SERVICES'
+  }
+] %>
+
+<section class="visit container flex flex-column align-center justify-center" id="visit">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">VISITING SEAFOOD EXPO EURASIA YOU CAN:</h2>
+  <div class="grid gap-3 gap-md-5 gap-lg-7 w-100">
+    <% for (var i = 0; i < visit.length; i++) { %>
+      <div class="col-12 col-md-6 col-lg-4 <%= visit[i].item %> ease-in-out duration-4 anim anim--up" data-anim="hidden">
+        <div class="visit__card card bg-blue h-100 py-10 px-5 px-md-10" data-movement="light" data-theme="light">
+          <div class="card-content flex-column justify-center text text--uppercase h-100">
+            <h3 class="color-light text-24 text-md-28 text-lg-34 bold-7 lh-2 mb-2"><%= visit[i].title %></h3>
+            <p class="color-white text-14 text-md-16 bold-7 lh-8"><%= visit[i].text %></p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<!-- Мероприятия -->
+
+<section class="events container bg-grey overflow-hidden">
+  <div class="card p-3 p-md-6">
+    <div class="grid gap-lg-10 ease-in-out duration-4 anim anim--right" data-anim="hidden">
+      <div class="col-12 col-lg-6">
+        <div class="events__pack pack pack--half radius-6 w-100 h-100" data-movement="light">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/town.webp" type="image/webp">
+            <img class="image image--rise" loading="lazy" src="img/pictures/town.png" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 ease-in-out duration-4 anim anim--left" data-anim="hidden">
+        <div class="card-content py-5 pl-4 pr-4 py-lg-0 pl-lg-0 pr-lg-10" data-movement="blend">
+          <h3 class="text text--uppercase text-18 text-md-20 text-lg-22 bold-7 lh-5 mb-3">Tüyap Fair and Congress Center, Pavilions 11, 12</h3>
+          <p class="text-14 text-md-16 bold-4 lh-5 mb-5">Cumhuriyet Mahallesi, Eski Hadimkoy Yolu Caddesi No: 9/1 Buyukcekmece, Istanbul</p>
+          <h4 class="text-16 text-md-18 text-lg-20 bold-7 lh-5 mb-5">Opening hours for visitors:</h4>
+          <div class="flex flex-column gap-3">
+            <div class="events__item flex align-center pb-3">
+              <span class="flex-grow text-14 text-md-16 bold-4 fade-60 mr-5">December 7</span>
+              <span class="flex-grow text-14 text-md-16 bold-4">10:00 - 18:00</span>
+            </div>
+            <div class="events__item flex align-center pb-3">
+              <span class="flex-grow text-14 text-md-16 bold-4 fade-60 mr-5">December 7</span>
+              <span class="flex-grow text-14 text-md-16 bold-4">10:00 - 18:00</span>
+            </div>
+            <div class="events__item flex align-center pb-3">
+              <span class="flex-grow text-14 text-md-16 bold-4 fade-60 mr-5">December 7</span>
+              <span class="flex-grow text-14 text-md-16 bold-4">10:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <%= require('./includes/footer.html').default %>
