@@ -26,6 +26,7 @@ const init = () => {
     spaceBetween: 28,
     speed: 1000,
     grabCursor: true,
+    loop: false,
 
     breakpoints: {
 
@@ -38,6 +39,13 @@ const init = () => {
       [media.lg]: {
 
         slidesPerView: 3
+
+      },
+
+      2000: {
+
+        slidesPerView: 3,
+        loop: true
 
       }
 
