@@ -144,14 +144,6 @@
 
     &::before,
     &::after {
-      width: 180px;
-    }
-  }
-
-  @media(max-width: $lg) {
-
-    &::before,
-    &::after {
       width: 120px;
     }
   }

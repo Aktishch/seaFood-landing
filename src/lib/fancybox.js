@@ -2,7 +2,9 @@ import { Fancybox } from '@fancyapps/ui'
 import ru from '@fancyapps/ui/src/Fancybox/l10n/ru'
 import '@fancyapps/ui/dist/fancybox.css'
 
+import sliderSwiper from './slider-swiper'
 import waved from '../ts/waved'
+import movement from '../ts/movement'
 
 const init = () => {
 
@@ -21,7 +23,9 @@ const init = () => {
 
       done: (fancybox, slide) => {
 
+        sliderSwiper.newsDetail()
         waved.init()
+        movement.init()
 
       }
 

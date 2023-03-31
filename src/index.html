@@ -195,12 +195,12 @@
       </div>
     </div>
     <div class="swiper-pagination d-flex d-md-none color-primary mt-10"></div>
-    <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
+    <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex zi-2" data-waved>
       <svg class="icon">
         <use xlink:href="img/icons.svg#arrow-left">
       </svg>
     </button>
-    <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
+    <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex zi-2" data-waved>
       <svg class="icon">
         <use xlink:href="img/icons.svg#arrow-right">
       </svg>
@@ -425,6 +425,61 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Новости -->
+
+<section class="news container flex flex-column align-center justify-center relative gradient overflow-hidden">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-30 text-lg-36 bold-7 lh-3 mb-4 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">NEWS</h2>
+  <h3 class="text text--center text--uppercase text-14 text-md-16 bold-7 lh-3 mb-7 mb-md-10 ease-in-out duration-4 anim anim--up" data-movement="blend" data-anim="hidden">LEARN MORE ABOUT OUR EVENT</h3>
+  <div class="news-slider relative w-100 pt-lg-5">
+    <div class="news-swiper swiper swiper--overwrap overflow-visible">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < 6; i++) { %>
+          <div class="news-slide swiper-slide h-auto ease-in-out duration-4 anim anim--left" data-anim="hidden">
+            <div class="news__card card link-wrapper radius-6 h-100" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-news.html">
+              <div class="news__pack pack pack--half bg-dark" data-movement="light">
+                <div class="loader">
+                  <span class="loader-progress">
+                    <svg class="loader-icon icon">
+                      <use xlink:href="img/icons.svg#loader">
+                    </svg>
+                  </span>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/news.webp" type="image/webp">
+                  <img class="news__image image image--rise" loading="lazy" src="img/pictures/news.jpg" alt="">
+                </picture>
+                <div class="news__blur"></div>
+              </div>
+              <div class="card-content pt-3 pb-7 px-4 pt-md-5 pb-md-10 px-md-8">
+                <time class="text-14 text-md-16 bold-4 fade-60 mb-2">03.02.2023</time>
+                <h4 class="link text text--uppercase text-16 text-md-18 text-lg-22 bold-7 lh-5 mb-2">The Island of Certainty in Changing World</h4>
+                <p class="text-14 text-md-16 bold-4 lh-5 fade-60 mb-3">Welcome on board of SEAFOOD EXPO EURASIA - the first international...</p>
+                <span class="btn btn--primary w-max mt-auto py-1 pr-1">
+                  More
+                  <svg class="card-arrow icon text-20 ml-1">
+                    <use xlink:href="img/icons.svg#arrow-up">
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="swiper-pagination d-flex d-md-none color-primary mt-10"></div>
+    <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex zi-2" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-left">
+      </svg>
+    </button>
+    <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex zi-2" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-right">
+      </svg>
+    </button>
   </div>
 </section>
 

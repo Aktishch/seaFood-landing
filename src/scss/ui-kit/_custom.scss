@@ -92,7 +92,7 @@
       box-shadow   : 0px 6px 15px var(--color-black-10);
     }
 
-    @media(min-width: $xl) {
+    @media(min-width: $md) {
       &-prev:not(.default) {
         left: -40px;
       }
