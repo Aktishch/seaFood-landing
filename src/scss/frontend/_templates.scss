@@ -124,12 +124,12 @@
 
   &::before {
     left            : 0;
-    background-image: linear-gradient(-90deg, var(--color-none) 0%, var(--color-white) 100%);
+    background-image: linear-gradient(-90deg, var(--color-none) 0%, var(--color-grey) 100%);
   }
 
   &::after {
     right           : 0;
-    background-image: linear-gradient(90deg, var(--color-none) 0%, var(--color-white) 100%);
+    background-image: linear-gradient(90deg, var(--color-none) 0%, var(--color-grey) 100%);
   }
 
   @media(min-width: 2000px) {
