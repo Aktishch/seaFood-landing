@@ -177,6 +177,14 @@
     width    : 255px;
   }
 
+  @media(hover) {
+    &__social {
+      &:hover {
+        background-color: var(--color-white-50);
+      }
+    }
+  }
+
   @media(max-width: $md) {
     &__logo {
       min-width: 170px;

@@ -25,7 +25,7 @@
 
   @media(min-width: $xl) {
     &__grid {
-      gap: 32px;
+      gap     : 32px;
       grid-gap: 32px;
     }
 
@@ -70,7 +70,7 @@
 .show {
   &__card {
     background-image: linear-gradient(107.73deg, var(--color-white-10) 0%, var(--color-white-10) 57.04%);
-    backdrop-filter: blur(6px);
+    backdrop-filter : blur(6px);
   }
 
   @media(min-width: $lg) {
@@ -83,15 +83,15 @@
 // Экспонат
 .exhibit {
   &__number {
-    max-width: 110px;
-    height: 160px;
+    max-width       : 110px;
+    height          : 160px;
     background-image: linear-gradient(180deg, var(--color-second-10) 0%, var(--color-none) 100%);
   }
 
   @media(max-width: $md) {
     &__number {
       max-width: 70px;
-      height: 80px;
+      height   : 80px;
     }
   }
 }
@@ -121,16 +121,16 @@
 .news {
   &-slide:nth-child(odd) {
     --news-color: var(--color-black);
-    --news-bg: var(--color-grey);
+    --news-bg   : var(--color-grey);
   }
 
   &-slide:nth-child(even) {
     --news-color: var(--color-white);
-    --news-bg: var(--color-black);
+    --news-bg   : var(--color-black);
   }
 
   &__card {
-    color: var(--news-color);
+    color           : var(--news-color);
     background-color: var(--news-bg);
   }
 
@@ -141,10 +141,10 @@
   }
 
   &__blur {
-    position: absolute;
-    inset: 0;
+    position  : absolute;
+    inset     : 0;
     background: linear-gradient(180deg, var(--color-none) 69.21%, var(--news-bg) 100%);
-    z-index: 2;
+    z-index   : 2;
   }
 
   @media(hover) {
@@ -164,15 +164,15 @@
 .news-detail {
   &__blur {
     &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 390px;
+      content         : "";
+      position        : absolute;
+      left            : 0;
+      right           : 0;
+      bottom          : 0;
+      width           : 100%;
+      height          : 390px;
       background-image: linear-gradient(0deg, var(--color-white) 0%, var(--color-none) 68.26%);
-      pointer-events: none;
+      pointer-events  : none;
     }
   }
 
@@ -196,9 +196,9 @@
           background-color: var(--color-gray-dark);
 
           border: {
-            width: 4px;
-            style: solid;
-            color: var(--color-white);
+            width : 4px;
+            style : solid;
+            color : var(--color-white);
             radius: 8px;
           }
         }
@@ -233,21 +233,6 @@
 
     &__content {
       height: auto;
-    }
-  }
-}
-
-.footer-social-link {
-  background: rgba(255, 255, 255, 0.3);
-  font-size: 18px;
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-
-  @media(hover) {
-    &:hover {
-      background: rgba(255, 255, 255, 0.4);
     }
   }
 }
