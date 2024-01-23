@@ -13,6 +13,7 @@ import waved from './ts/waved'
 import movement from './ts/movement'
 import bubbles from './ts/bubbles'
 import accordion from './ts/accordion'
+import cookie from './ts/cookie'
 
 // Style
 import './scss/index.scss'
@@ -32,5 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
   movement.init()
   bubbles.init()
   accordion.init()
+  cookie.init()
 
 })
