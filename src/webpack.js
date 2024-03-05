@@ -14,6 +14,7 @@ import movement from './ts/movement'
 import bubbles from './ts/bubbles'
 import accordion from './ts/accordion'
 import cookie from './ts/cookie'
+import listing from './ts/listing'
 
 // Style
 import './scss/index.scss'
@@ -34,5 +35,6 @@ window.addEventListener('DOMContentLoaded', () => {
   bubbles.init()
   accordion.init()
   cookie.init()
+  listing.init()
 
 })
