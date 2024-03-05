@@ -237,6 +237,19 @@
   }
 }
 
+// Партнеры
+.partners {
+  &__card {
+    min-height: 300px;
+  }
+
+  @media (max-width: $lg) {
+    &__card {
+      min-height: 150px;
+    }
+  }
+}
+
 // Куки
 .cookie {
   bottom: 0;
