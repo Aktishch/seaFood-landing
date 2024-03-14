@@ -13,11 +13,15 @@ const init = (): void => {
     const currentOffsetTop: number = scrolledPage.init().top
     const headerHeight: number = header.offsetHeight
 
-    prevOffsetTop > currentOffsetTop ? header.style.setProperty('--top', '0') : header.style.setProperty('--top', `-${headerHeight}px`)
+    if (header.offsetHeight < currentOffsetTop) {
+      prevOffsetTop > currentOffsetTop ? header.style.setProperty('--top', '0') : header.style.setProperty('--top', `-${headerHeight}px`)
+    }
 
     prevOffsetTop = currentOffsetTop
 
   }
+
+  scrollHeader()
 
   document.addEventListener('scroll', scrollHeader as EventListener)
 
