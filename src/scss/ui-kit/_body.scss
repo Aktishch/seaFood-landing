@@ -1,4 +1,3 @@
-// Тело документа
 body {
   color           : var(--color-black);
   background-color: var(--color-white);
@@ -41,7 +40,6 @@ body {
   }
 }
 
-// Выделение
 ::selection {
   color           : var(--color-white);
   background-color: var(--color-primary);

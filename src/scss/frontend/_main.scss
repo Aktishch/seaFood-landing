@@ -1,4 +1,3 @@
-// Главный блок
 .main {
   min-height: 780px;
 
@@ -17,7 +16,6 @@
   }
 }
 
-// О нас
 .about {
   &__bg {
     background-image: linear-gradient(108.89deg, var(--color-akva) 30.7%, var(--color-second-30) 100%);
@@ -47,7 +45,6 @@
   }
 }
 
-// Экспорт
 .expo {
   &-slide {
     min-height: 270px;
@@ -66,7 +63,6 @@
   }
 }
 
-// Шоу
 .show {
   &__card {
     background-image: linear-gradient(107.73deg, var(--color-white-10) 0%, var(--color-white-10) 57.04%);
@@ -80,7 +76,6 @@
   }
 }
 
-// Экспонат
 .exhibit {
   &__number {
     max-width       : 110px;
@@ -96,7 +91,6 @@
   }
 }
 
-// Мероприятия
 .events {
   &__item {
     &:not(:last-child) {
@@ -117,7 +111,6 @@
   }
 }
 
-// Новости
 .news {
   &-slide:nth-child(odd) {
     --news-color: var(--color-black);
@@ -160,7 +153,6 @@
   }
 }
 
-// Детальная новости
 .news-detail {
   &__blur {
     &::after {
@@ -237,7 +229,6 @@
   }
 }
 
-// Партнеры
 .partners {
   &__card {
     min-height: 300px;
@@ -250,7 +241,6 @@
   }
 }
 
-// Куки
 .cookie {
   bottom: 0;
   left: 0;

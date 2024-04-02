@@ -1,4 +1,3 @@
-// Появление
 .ease {
   transition-timing-function: ease;
 }
@@ -19,14 +18,12 @@
   transition-timing-function: linear;
 }
 
-// Время
 @for $i from 1 through 10 {
   .duration-#{$i} {
     transition-duration: #{calc($i / 10) + s};
   }
 }
 
-// Задержка
 .delay {
   @include getMedia {
     @for $i from 1 through 10 {

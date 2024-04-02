@@ -1,4 +1,3 @@
-// Цвета
 $colors: ("none": rgba(0, 0, 0, 0),
   "primary": #EF713A,
   "second": #0170E5,
@@ -11,18 +10,15 @@ $colors: ("none": rgba(0, 0, 0, 0),
   "grey": #F7F7F8,
   "gray": #EFF0F3);
 
-// Шрифты
 $font-family: ("alt": "Futura PT",
   "base": "Inter"
 );
 
-// Разрешения экрана
 $sm: 460.98px;
 $md: 768.98px;
 $lg: 1024.98px;
 $xl: 1280.98px;
 
-// Переменные в CSS
 :root {
 
   @each $key,

@@ -1,11 +1,9 @@
-// Получение трех цветов по rgb
 @function rgbValuesFromHex($hex) {
   @return red($hex),
   green($hex),
   blue($hex);
 }
 
-// Создание переменных цвета с разной прозрачностью
 @mixin getColors($color, $name) {
   @if ($name=="none"or $name=="grey"or $name=="light"or $name=="dark"or $name=="blue"or $name=="akva") {
     --color-#{$name}: #{$color};
@@ -28,7 +26,6 @@
   }
 }
 
-// Создание медиа-запросов
 @mixin getMedia {
 
   @content;
@@ -46,7 +43,6 @@
   }
 }
 
-// Создание внешних и внутренних отступов
 @mixin getSpacing($value) {
   @include getMedia {
     @for $i from 0 through 10 {
@@ -57,7 +53,6 @@
   }
 }
 
-// Создание переменных для кнопки
 @mixin getBtn($color) {
   &--#{$color} {
     --btn-color : var(--color-#{$color});

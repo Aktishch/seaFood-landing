@@ -1,4 +1,3 @@
-// Флекс
 .flex {
   display: flex;
 
@@ -19,7 +18,6 @@
   }
 }
 
-// Последовательность
 .order {
   @include getMedia {
     @for $i from 1 through 5 {
@@ -30,7 +28,6 @@
   }
 }
 
-// Выравнивание элементов
 .align {
   &-start {
     align-items: flex-start;
@@ -49,7 +46,6 @@
   }
 }
 
-// Выравнивание контента
 .justify {
   &-start {
     justify-content: flex-start;

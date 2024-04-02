@@ -1,4 +1,3 @@
-// Сетка
 .grid {
   display              : grid;
   grid-template-columns: repeat(12, 1fr);
@@ -9,7 +8,6 @@
   }
 }
 
-// Столбцы
 .col {
   @include getMedia {
     @for $i from 1 through 12 {
@@ -20,7 +18,6 @@
   }
 }
 
-// Строки
 .row {
   @include getMedia {
     @for $i from 1 through 12 {

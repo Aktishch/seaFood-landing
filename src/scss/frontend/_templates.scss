@@ -1,4 +1,3 @@
-// Прогресс прокрутки страницы
 .progress-line {
   top   : 0;
   left  : 0;
@@ -6,7 +5,6 @@
   height: 3px;
 }
 
-// Шапка документа
 .header {
   top             : 0;
   left            : 0;
@@ -44,7 +42,6 @@
   }
 }
 
-// Мобильное меню
 .mobile {
   inset: 0;
 
@@ -109,7 +106,6 @@
   }
 }
 
-// Градиент
 .gradient {
   position: relative;
 
@@ -160,7 +156,6 @@
   }
 }
 
-// Карта
 .map {
   height: 400px;
 
@@ -171,7 +166,6 @@
   }
 }
 
-// Подвал
 .footer {
   background-image: linear-gradient(240.03deg, var(--color-none) 31.71%, var(--color-black-50) 83.17%);
 
